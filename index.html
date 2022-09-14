@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="UTF-8">
+<head>
+    <title>Page d'accueil</title>
+    <div include-html="includes/head.html"></div>
+    <script src="js/include.js"></script>
+
+</head>
+<body>
+<div include-html="includes/navbar.html"></div>
+<br>
+<div class="container d-flex justify-content-center">
+    <div class="card" style="width: auto;">
+        <p class="p-3 lead"> Bienvenue sur la page de l'aide statique de Wakfu, ici vous trouverez des outils utiles qui
+            vous permettront de faciliter vos actions en jeu.</p>
+    </div>
+</div>
+<div class="container d-flex justify-content-center">
+    <div class="card" style="width: auto;">
+        <img class="card-img-top" src="img/calculatrice.png" alt="Calculatrice de métiers de craft">
+        <div class="card-body">
+            <h5 class="card-title">Calculatrice de métiers de craft</h5>
+            <p class="card-text">Découvrez la calculatrice de métier de fabrication, permettant de connaître le nombre
+                de ressources
+                nécessaires pour les objets grossiers, rudimentaire, etc.</p>
+            <a href="calculatrice/calculatrice.html" class="btn btn-light">Découvrir</a>
+        </div>
+    </div>
+    <div class="card" style="width: auto;">
+        <img class="card-img-top" src="img/WIP.png" alt="Calculatrice de métiers de récolte (en développement)">
+        <div class="card-body">
+            <h5 class="card-title">Calculatrice de métiers de récolte (en développement)</h5>
+            <p class="card-text">Découvrez la calculatrice de métier de récolte, permettant de connaître le nombre de
+                ressources nécessaires pour monter de niveau</p>
+            <!--            <a href="calculatrice/calculatrice.html" class="btn btn-light">Découvrir</a>-->
+        </div>
+    </div>
+</div>
+
+<script> includeHTML();</script>
+</body>
+</html>
+

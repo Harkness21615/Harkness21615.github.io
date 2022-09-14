@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="UTF-8">
+<head>
+    <title>Page d'accueil</title>
+    <div include-html="../includes/head.html"></div>
+    <script src="../js/include.js"></script>
+</head>
+<body>
+<div include-html="../includes/navbar.html"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="container">
+                <div class="alert alert-danger" role="alert" style="display:none" id="alert">
+                    <div id="ErrorMessage"></div>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="header col-sm-6">
+                        <h3>Calculatrice de métier Wakfu</h3>
+                    </div>
+
+                </div>
+                <div class="panel-body">
+                    <!--niveau du métier-->
+                    <div class="form-group row">
+                        <label for="currentlvl" class="col-sm-6 col-form-label">
+                            Niveau du métier
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control text-right" id="currentlvl" name="currentlvl"
+                                   placeholder="Par défaut: 0">
+                        </div>
+                    </div>
+                    <!--xp du métier-->
+                    <div class="form-group row">
+                        <label for="currentxp" class="col-sm-6 col-form-label">
+                            XP déjà accumulé
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control text-right" id="currentxp" name="currentxp"
+                                   placeholder="Par défaut: 0">
+                        </div>
+                    </div>
+                    <!--xp par craft-->
+                    <div class="form-group row">
+                        <label for="itemxp" class="col-sm-6 col-form-label">
+                            Nombre d'XP par craft
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control text-right" id="itemxp" name="itemxp"
+                                   placeholder="Par défaut: 300">
+                        </div>
+                    </div>
+                    <!--Niveau à atteindre-->
+                    <div class="form-group row">
+                        <label for="wantedlvl" class="col-sm-6 col-form-label">
+                            Niveau cible
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control text-right" id="wantedlvl" name="wantedlvl"
+                                   placeholder="Par défaut: 10">
+                        </div>
+                    </div>
+                    <!--Checkbox Maroquinier-->
+                    <div class="form-group row">
+                        <div class="form-check d-flex justify-content-end">
+                            <input class="form-check-input" type="checkbox" value="" id="typeOfJob"
+                                   onclick="checkState(this)">
+                            <label class="form-check-label" for="typeOfJob">
+                                Maroquinerie
+                            </label>
+                        </div>
+                    </div>
+                    <!--boutons-->
+                    <div class="form-group row">
+                        <div class="col-sm-10"></div>
+                        <div class="col-sm-2 ">
+                            <button type="button" class="btn btn-light" onclick="add()">Calculer</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="demo"></div>
+                <br>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mt-5 bg-light">
+                <div class="card-body">
+                    <h1>Informations</h1>
+                    <p>Cette application sert à aider au calcul des métiers de craft dans Wakfu.</p>
+                    <p>Son fonctionnement est assez basique mais fonctionne pour tous les métiers, une case à cocher
+                        avec <strong>Maroquinerie</strong> est présente étant donné que c'est le seul métier du jeu à
+                        demander 4 fois deux ressources tandis que les autres demandent 5 fois deux ressources.</p>
+                    <p>Il était prévu au départ que le calcul s'arrête au multiple de 10 qui suit le niveau actuel, mais
+                        à la place le <strong>Niveau cible</strong> a été ajouté.</p>
+                    <p>Si un des champs se retrouve avec sa valeur à 0, il utilisera sa valeur par défaut. (Exemple: Je
+                        mets 0 dans le <strong>Nombre d'XP par craft</strong> et lance le calcul, le calcul prendra
+                        comme valeur 300).</p>
+                </div>
+                <div class="row">
+                    <div class="header col-sm-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/myscript.js"></script>
+<script> includeHTML();</script>
+</body>
+</html>
+
